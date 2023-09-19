@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">GiniAppsExam</string>
+    <string name="likes">Likes: %1$d</string>
+    <string name="comments">Comments: %1$d</string>
+</resources>
