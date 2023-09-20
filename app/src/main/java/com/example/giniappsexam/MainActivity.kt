@@ -47,7 +47,7 @@ class MainActivity : AppCompatActivity() {
             .setConstraints(constraints)
             .build()
 
-        WorkManager.getInstance(this).enqueue(workRequest)
+        WorkManager.getInstance(applicationContext).enqueue(workRequest)
     }
 
     private fun openFragment() {

@@ -1,7 +1,9 @@
 package com.example.giniappsexam.di
 
 import android.content.Context
+import androidx.hilt.work.HiltWorkerFactory
 import androidx.room.Room
+import androidx.work.WorkerFactory
 import com.example.giniappsexam.data.GalleryDao
 import com.example.giniappsexam.data.GalleryDatabase
 import com.example.giniappsexam.network.PixabayApi
@@ -43,4 +45,11 @@ object AppModule {
             GalleryDatabase::class.java,
             GALLERY_DATABASE
         ).fallbackToDestructiveMigration().build()
+
+    @Provides
+    fun provideUpdateDataWorkerFactory(
+        workerFactory: HiltWorkerFactory
+    ): WorkerFactory {
+        return workerFactory
+    }
 }
